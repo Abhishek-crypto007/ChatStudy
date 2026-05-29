@@ -86,7 +86,7 @@ client.connect(("localhost", 9999))
 done=False
 
 while not done:
-    client.send(input("Message ").encode('utf-8'))
+    client.send(input("Client : ").encode('utf-8'))
     msg = client.recv(1024).decode('utf-8')
 
     if msg == 'quit':
@@ -120,7 +120,7 @@ while not done:
     else:
         print(msg)
 
-    client.send(input("Message ").encode('utf-8'))
+    client.send(input("Server :").encode('utf-8'))
 
 
 client.close()
